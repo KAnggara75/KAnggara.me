@@ -534,6 +534,7 @@
         </div>
         <p class="text-medium text-xs text-slate-500 text-center">
           Dibuat dengan <span class="text-pink-500"> ♥️ </span> oleh <a href="https://instagram.com/kanggara75" target="_blank" class="font-bold text-primary"> Kelvin Anggara </a> menggunakan
+          <a href="https://laravel.com" target="_blank" class="font-bold text-[#FF2D20]"> Laravel </a> &
           <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500"> Tailwind CSS </a>
         </p>
       </div>
