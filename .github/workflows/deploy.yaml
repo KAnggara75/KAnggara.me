@@ -23,8 +23,8 @@ jobs:
           dest: vendor.zip
       - name: Remove node_mmodules & vendor folder
         run: rm -rf node_modules vendor
-      - name: cek file
-        run: ls -la
+      - name: Create env
+        run: echo ${{ secrets.ENV }} | base64 -d > .env
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
