@@ -23,6 +23,8 @@ jobs:
           dest: vendor.zip
       - name: Remove node_mmodules & vendor folder
         run: rm -rf node_modules vendor
+      - name: Remove unused file
+        run: rm .editorconfig .env.example .gitignore .gitattributes .styleci.yml artisan composer.json composer.lock package.json package-lock.json phpunit.xml README.md tailwind.config.js webpack.mix.js
       - name: Create env
         run: echo ${{ secrets.ENV }} | base64 -d > .env
       - name: 📂 Sync files
