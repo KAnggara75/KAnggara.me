@@ -17,6 +17,12 @@ jobs:
         run: npm install
       - name: Run Production build
         run: npm run prod
+      - uses: papeloto/action-zip@v1
+        with:
+          files: vendor/
+          dest: vendor.zip
+      - name: Remove node_mmodules & vendor folder
+        run: rm -rf node_modules vendor
       - name: cek file
         run: ls -la
       # - name: 📂 Sync files
