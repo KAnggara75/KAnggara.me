@@ -1,4 +1,5 @@
 window.onscroll = function () {
+	const progressBar = document.querySelector("#progress-bar");
 	const header = document.querySelector("header");
 	const fixNav = header.offsetTop;
 
@@ -7,6 +8,15 @@ window.onscroll = function () {
 	} else {
 		header.classList.remove("navbar-fixed");
 	}
+
+	window.addEventListener("scroll", () => {
+		let winScroll =
+			document.body.scrollTop || document.documentElement.scrollTop;
+		let height =
+			document.documentElement.scrollHeight -
+			document.documentElement.clientHeight;
+		progressBar.style.width = Math.round((winScroll / height) * 100) + "%";
+	});
 };
 
 // hamberger
