@@ -15,7 +15,7 @@ window.onscroll = function () {
 		let height =
 			document.documentElement.scrollHeight -
 			document.documentElement.clientHeight;
-		progressBar.style.width = Math.round((winScroll / height) * 100) + "%";
+		progressBar.style.width = (winScroll / height) * 100 + "%";
 	});
 };
 
