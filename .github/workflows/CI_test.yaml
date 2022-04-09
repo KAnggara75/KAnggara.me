@@ -20,7 +20,7 @@ jobs:
         run: npm run prod
       - name: Run Production build
         run: |
-        ls -l
+          ls -l
       # - name: Create env Testing
       # run: echo ${{ secrets.ENV }} | base64 -d > .env.testing
       - name: Laravel Test
