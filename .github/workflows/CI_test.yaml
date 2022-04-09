@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📦 Get latest code
-        uses: actions/checkout@v1
-      - name: PHPUnit Testing
-        uses: nathanheffley/laravel-phpunit-action@master
         uses: actions/checkout@v2
       - name: Install dependencies
         run: composer install
@@ -22,6 +19,6 @@ jobs:
       - name: Run Production build
         run: npm run prod
       - name: Create env Testing
-        run: cp .env.example .env.testing
+        run: cp .env.example .env && php artisan key:generate && cp .env .env.testing
       - name: Laravel Test
         run: php artisan test
