@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📦 Get latest code
-        uses: actions/checkout@v2
-      - name: Install dependencies
+        uses: actions/checkout@v1
+      - name: PHPUnit Testing
         uses: nathanheffley/laravel-phpunit-action@master
