@@ -13,15 +13,4 @@ jobs:
       - name: 📦 Get latest code
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: composer install
-      - name: Install Node dependencies
-        run: npm ci
-      - name: Run Production build
-        run: npm run prod
-      - name: Run Production build
-        run: |
-          ls -l
-      # - name: Create env Testing
-      # run: echo ${{ secrets.ENV }} | base64 -d > .env.testing
-      - name: Laravel Test
-        run: php artisan test
+        uses: nathanheffley/laravel-phpunit-action@master
