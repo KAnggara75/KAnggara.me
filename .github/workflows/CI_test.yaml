@@ -14,3 +14,14 @@ jobs:
         uses: actions/checkout@v1
       - name: PHPUnit Testing
         uses: nathanheffley/laravel-phpunit-action@master
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: composer install
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Run Production build
+        run: npm run prod
+      - name: Create env Testing
+        run: cp .env.example .env.testing
+      - name: Laravel Test
+        run: php artisan test
