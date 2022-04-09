@@ -1,0 +1,24 @@
+name: 🧪  CI Testing App
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  testing:
+    name: 🎉  Unit Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: composer install
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Run Production build
+        run: npm run prod
+      # - name: Create env Testing
+      # run: echo ${{ secrets.ENV }} | base64 -d > .env.testing
+      - name: Laravel Test
+        run: php artisan test
