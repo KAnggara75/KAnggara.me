@@ -7,10 +7,10 @@ on:
 
 jobs:
   testing:
-    name: 🎉  Unit Testing
+    name: 🧪 Unit Testing
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: 📦 Get latest code
         uses: actions/checkout@v2
       - name: Install dependencies
         run: composer install
@@ -18,6 +18,9 @@ jobs:
         run: npm ci
       - name: Run Production build
         run: npm run prod
+      - name: Run Production build
+        run: |
+        ls -l
       # - name: Create env Testing
       # run: echo ${{ secrets.ENV }} | base64 -d > .env.testing
       - name: Laravel Test
