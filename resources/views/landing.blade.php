@@ -518,6 +518,12 @@
   </footer>
   <!-- Footer End -->
 
+  <!-- Back to Top Start -->
+  <a href="#home" class="h-14 w-14 bg-primary rounded-full fixed z-[9999] bottom-4 right-4 p-4 v items-center justify-center hover:animate-pulse hover:shadow-md" id="to-top">
+    <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+  </a>
+  <!-- Back to Top End -->
+
   <script src="js/script.js"></script>
 </body>
 

@@ -1,11 +1,16 @@
 window.onscroll = function () {
 	const progressBar = document.querySelector("#progress-bar");
 	const header = document.querySelector("header");
+	const toTop = document.querySelector("#to-top");
 	const fixNav = header.offsetTop;
 
 	if (window.pageYOffset > fixNav) {
+		toTop.classList.add("flex");
+		toTop.classList.remove("hidden");
 		header.classList.add("navbar-fixed");
 	} else {
+		toTop.classList.add("hidden");
+		toTop.classList.remove("flex");
 		header.classList.remove("navbar-fixed");
 	}
 
