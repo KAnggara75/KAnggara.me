@@ -501,14 +501,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-z-10 {
   z-index: -10;
 }
-.z-\[999\] {
-  z-index: 999;
-}
 .z-\[9999\] {
   z-index: 9999;
-}
-.m-2 {
-  margin: 0.5rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -696,17 +690,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border {
   border-width: 1px;
 }
-.border-2 {
-  border-width: 2px;
-}
 .border-t {
   border-top-width: 1px;
 }
 .border-t-2 {
   border-top-width: 2px;
-}
-.border-r-2 {
-  border-right-width: 2px;
 }
 .border-l-2 {
   border-left-width: 2px;
